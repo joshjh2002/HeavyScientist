@@ -1,11 +1,15 @@
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { MessageActionRow, MessageButton } = require("discord.js");
-const debug = require("../debug");
 const {
-  conan_role,
-  rust_role,
-  farming_role,
-} = require("../jsons/server-embeds");
+  SlashCommandBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  Events,
+} = require("discord.js");
+
+const debug = require("../debug");
+
+const { rust_role } = require("../jsons/server-embeds");
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("roles")
@@ -33,11 +37,11 @@ module.exports = {
       });
       */
 
-      row = new MessageActionRow().addComponents(
-        new MessageButton()
+      row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
           .setCustomId("rust-button")
           .setLabel("Rusty Operations")
-          .setStyle("PRIMARY")
+          .setStyle(ButtonStyle.Primary)
           .setEmoji(process.env.RUST_EMOJI)
       );
 

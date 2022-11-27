@@ -2,6 +2,7 @@ require("dotenv").config();
 const debug = require("./debug");
 const fs = require("fs");
 const pgDatabase = require("pg");
+const { ChannelType, PermissionsBitField } = require("discord.js");
 
 const pgconnection = new pgDatabase.Client({
   user: process.env.DB_USER,
@@ -42,29 +43,43 @@ module.exports = {
     //creates channel in the same location as the reaction message
     const channel = await client.guilds.cache
       .get(process.env.DC_GUILD_ID)
-      .channels.create("ticket-", {
-        type: "text", //This create a text channel, you can make a voice one too, by changing "text" to "voice"
+      .channels.create({
+        name: "ticket-",
+        type: ChannelType.GuildText, //This create a text channel, you can make a voice one too, by changing "text" to "voice"
         parent: process.env.DC_TICKETS_CATEGORY, //This is the category it is in
         permissionOverwrites: [
           {
             id: process.env.DC_ADMIN_ROLE, //To make it be seen by a certain role, user an ID instead
-            allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "READ_MESSAGE_HISTORY"], //Allow permissions
-            deny: [], //Deny permissions
+            allow: [
+              PermissionsBitField.Flags.ViewChannel,
+              PermissionsBitField.Flags.SendMessages,
+              PermissionsBitField.Flags.ReadMessageHistory,
+            ], //Allow permissions
           },
           {
             id: process.env.DC_MOD_ROLE, //To make it be seen by a certain role, user an ID instead
-            allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "READ_MESSAGE_HISTORY"], //Allow permissions
-            deny: [], //Deny permissions
+            allow: [
+              PermissionsBitField.Flags.ViewChannel,
+              PermissionsBitField.Flags.SendMessages,
+              PermissionsBitField.Flags.ReadMessageHistory,
+            ], //Allow permissions
           },
           {
             id: user.id, //To make it be seen by a certain role, user an ID instead
-            allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "READ_MESSAGE_HISTORY"], //Allow permissions
-            deny: [], //Deny permissions
+            allow: [
+              PermissionsBitField.Flags.ViewChannel,
+              PermissionsBitField.Flags.SendMessages,
+              PermissionsBitField.Flags.ReadMessageHistory,
+            ], //Allow permissions
           },
           {
             // same as before
             id: client.guilds.cache.get(process.env.DC_GUILD_ID).roles.everyone,
-            deny: ["VIEW_CHANNEL", "SEND_MESSAGES", "READ_MESSAGE_HISTORY"],
+            deny: [
+              PermissionsBitField.Flags.ViewChannel,
+              PermissionsBitField.Flags.SendMessages,
+              PermissionsBitField.Flags.ReadMessageHistory,
+            ],
           },
         ],
       });

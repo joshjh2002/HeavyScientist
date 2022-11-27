@@ -1,5 +1,10 @@
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { MessageActionRow, MessageButton } = require("discord.js");
+const {
+  SlashCommandBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  Events,
+} = require("discord.js");
 const debug = require("../debug");
 
 module.exports = {
@@ -83,11 +88,11 @@ module.exports = {
         ],
       };
 
-      const row = new MessageActionRow().addComponents(
-        new MessageButton()
+      const row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
           .setCustomId("rules-button")
           .setLabel("Agree to rules")
-          .setStyle("PRIMARY")
+          .setStyle(ButtonStyle.Primary)
       );
 
       interaction.reply({ embeds: [embed], components: [row] });

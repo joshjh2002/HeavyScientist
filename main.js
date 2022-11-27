@@ -2,17 +2,18 @@ require("dotenv").config();
 const debug = require("./debug");
 const tools = require("./tools");
 
-const { REST } = require("@discordjs/rest");
-const { Routes } = require("discord-api-types/v9");
+const {
+  Client,
+  GatewayIntentBits,
+  Partials,
+  Collection,
+  REST,
+  Routes,
+} = require("discord.js");
 
-const { Intents, Client, Collection } = require("discord.js");
 const client = new Client({
-  intents: [
-    "GUILDS",
-    "GUILD_MESSAGES",
-    "GUILD_MESSAGE_REACTIONS",
-    "GUILD_MEMBERS",
-  ],
+  intents: [GatewayIntentBits.Guilds],
+  partials: [Partials.Channel],
 });
 
 const fs = require("fs");
@@ -22,6 +23,7 @@ const prefix = "-";
 client.commands = new Collection();
 let commands = tools.LoadCommands(fs, client);
 
+/*
 const DELETE = false;
 if (DELETE) {
   const rest = new REST({ version: "9" }).setToken(process.env.DC_TOKEN);
@@ -44,6 +46,7 @@ if (DELETE) {
       return Promise.all(promises);
     });
 }
+*/
 
 //Once the bot is online
 client.once("ready", async () => {

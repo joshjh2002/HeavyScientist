@@ -1,5 +1,9 @@
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { MessageActionRow, MessageButton } = require("discord.js");
+const {
+  SlashCommandBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+} = require("discord.js");
 const { report_embed } = require("../jsons/server-embeds");
 const debug = require("../debug");
 
@@ -12,30 +16,20 @@ module.exports = {
       interaction.member.roles.cache.has(process.env.DC_ADMIN_ROLE) ||
       interaction.member.roles.cache.has(process.env.DC_MOD_ROLE)
     ) {
-      let row = new MessageActionRow().addComponents(
-        new MessageButton()
-          .setCustomId("discord-ticket")
-          .setStyle("SECONDARY")
-          .setEmoji(process.env.DISCORD_EMOJI),
-        /*
-        new MessageButton()
-          .setCustomId("conan-ticket")
-          .setStyle("SECONDARY")
-          .setEmoji(process.env.CONAN_EMOJI),
-          */
-        new MessageButton()
+      let row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
           .setCustomId("rust-ticket")
-          .setStyle("SECONDARY")
+          .setStyle(ButtonStyle.Secondary)
           .setEmoji(process.env.RUST_EMOJI),
-        /*
-        new MessageButton()
-          .setCustomId("farming-ticket")
-          .setStyle("SECONDARY")
-          .setEmoji(process.env.FARMING_EMOJI),
-          */
-        new MessageButton()
+
+        new ButtonBuilder()
+          .setCustomId("discord-ticket")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji(process.env.DISCORD_EMOJI),
+
+        new ButtonBuilder()
           .setCustomId("other-ticket")
-          .setStyle("SECONDARY")
+          .setStyle(ButtonStyle.Secondary)
           .setEmoji(process.env.OTHER_EMOJI)
       );
 
