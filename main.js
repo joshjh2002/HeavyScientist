@@ -130,7 +130,6 @@ client.on("interactionCreate", async (interaction) => {
 
 //When someone sends a message, this will execute
 client.on("messageCreate", (message) => {
-  //tools.manageMessages(prefix, message, client);
   ticket.logMessage(message, client);
 });
 
@@ -139,44 +138,21 @@ client.on("messageReactionAdd", (reaction, user) => {
   //tools.messageReaction(reaction, user, client);
 });
 
-const ships = ["Star Fighter", "Cruiser", "Ship"];
 client.on("guildMemberAdd", async (member) => {
   await sleep(500);
-  let num = Math.floor(Math.random() * 30) + 1;
-  let rnd = Math.floor(Math.random() * ships.length);
+  debug.log("Member Joined\n");
 
   client.channels.cache
     .get(process.env.DC_WELCOME_CHANNEL)
-    .send(
-      "<@" +
-        member.id +
-        "> has landed their " +
-        ships[rnd] +
-        " in the Operations Centre air bay " +
-        num +
-        ".\n\nThere are now currently " +
-        client.guilds.cache.get("651455552517570586").memberCount +
-        " people on board."
-    );
+    .send("<@" + member.id + "> has appeared on the beach.");
 });
 
 client.on("guildMemberRemove", async (member) => {
   debug.log("Member Left\n");
-  await sleep(500);
-  let num = Math.floor(Math.random() * 30) + 1;
-  let rnd = Math.floor(Math.random() * ships.length);
 
   client.channels.cache
     .get(process.env.DC_WELCOME_CHANNEL)
-    .send(
-      "<@" +
-        member.id +
-        "> has left on their " +
-        ships[rnd] +
-        ". We hope to see them return soon.\n\nThere are now currently " +
-        client.guilds.cache.get("651455552517570586").memberCount +
-        " people on board."
-    );
+    .send("<@" + member.id + "> has left the island.");
 });
 
 client.login(process.env.DC_TOKEN);
