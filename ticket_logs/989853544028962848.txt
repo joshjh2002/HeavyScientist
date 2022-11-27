@@ -1,0 +1,10 @@
+Operations Centre AI: Hello <@348698629822873602>, thank you for creating a support ticket! The <@&947809960534867998> will be with you shortly. Please can you describe your issue below?
+TheSaltyVet: I dont know if the Heavy Scientists are bugged in Abandoned Military Base, but without even getting within 100 meters of the place they were sniping me. Hid behind a huge rock formation just for them to snipe me through the terrain....was trying to get a downed plane but got killed due to a bug I believe? At least the shooting through terrain part.
+TheSaltyVet: Lost a kit, a mini and a couple airdrops/green crates because of it.
+Terpene (Head Admin): Thank you for submitting a ticket, I’m sorry to hear you experienced that. They shouldn’t be shooting through the terrain and they shouldn’t be shooting that far, I will take a look at it today and I will report back my results.
+Terpene (Head Admin): Thank you for being patient, sorry for the wait. I have reconfigured both Artic Research Base, and Abandon Military Base. If you are running around the base they should bother you unless you are really close to it, and the NPC sees you.
+Terpene (Head Admin): I can't really do anything about the plane crash loot unfortunately, as there is no way for me to tell exactly what all you had, but I did reimburse you for the minicopter. When ever you wake up you have a minicopter airdrop in your inventory waiting for you. I do apologize for the inconvenience that this has caused you, and I hope this message finds you well. 
+
+Let me know if I can offer anymore assistance, and I want to thank you for submitting a ticket and for playing on Rusty Operations!
+TheSaltyVet: Thank you so much! I appreciate the help!
+Terpene (Head Admin): Of course, your very welcome! If there is anything else, please feel free to let me know. I will close this ticket in 24 hours if there nothing else.

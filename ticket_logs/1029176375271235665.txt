@@ -1,0 +1,14 @@
+Operations Centre AI: Hello <@152881027285516288>, thank you for creating a support ticket! The <@&947809960534867998> will be with you shortly. Please can you describe your issue below?
+GG: Exported the combatlog, not sure what you need, these are the kills
+GG: 
+Terpene (Head Admin): 672.8s  player   cold Soez        Soez    assets/prefabs/weapons/ak47u/iceskin/ak47u_ice.entity.prefab riflebullet  hand    10.9m    61.7   24.2          
+672.6s  player   cold Soez        Soez    assets/prefabs/weapons/ak47u/iceskin/ak47u_ice.entity.prefab riflebullet  head    10.3m    24.2   0.0    killed 
+672.5s  player   cold Soez        Soez    assets/prefabs/weapons/ak47u/iceskin/ak47u_ice.entity.prefab riflebullet  head    9.5m     0.0    0.0    killed 
+607.6s  player   Zeus Soez        Soez    assets/prefabs/weapons/ak47u/ak47u.entity.prefab             riflebullet  head    15.2m    57.5   0.0    killed
+GG: I got tripled from nowhere, spawned in a nearby bag, another instant headshot
+GG: Maybe they're just good, was pretty crazy tho imo
+Terpene (Head Admin): Thank you for submitting this, the issue has been handled. One of them had a recent VAC ban as well, they won't be around any longer. If you feel like playing still your free to do what you want with their base and their stuff.
+Terpene (Head Admin): Let me know if there is anything else I can help with, if you no longer need assistance please press the ✅  to close the ticket.
+Terpene (Head Admin): 
+GG: Awesome, thank you!! Really appreciate it
+Levelling Systems: <@152881027285516288> just advanced to level 1!

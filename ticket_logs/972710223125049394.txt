@@ -1,0 +1,21 @@
+LeanaMae: Twice now my home teleport was deleted and my beds disappeared, stranding me across the map. My home is not close to a town
+Terpene (Head Admin): I am sorry for the inconvenience, I did inform the Conan Head Admin about your last base being deleted. I unfortunately can't do anything from my end as I wouldn't be able to figure out the issue.  @JackalTaco (Head Admin) will be with you soon to figure out and resolve your issue. Again, I apologize that there's nothing I can do.
+LeanaMae: It's ok thank you for the help
+JackalTaco (Head Admin): Hey Leana, I'm sorry this has happened to you again but I'll try my hardest to get to the bottom of it.
+Could you tell me please, is your base using stage foundations from the Derketo expansion?LeanaMae: The base is fine. The /home  keeps getting deleted and my beds. My base is made up of the normal feats. I didn't use the mods.
+JackalTaco (Head Admin): I'll have a look at the logs and see if I see anything unusual in there
+JackalTaco (Head Admin): Hey Leana, I had a look through some of the server logs, however, it is like looking for a needle in a haystack as the problem could have happened at any time within the time you were logged off. So I can try and narrow the issue down I'll need some more information from you.
+When you die and go to respawn is your bed not there or is it there but just saying that its 'blocked?
+What kind of bed is it you were using?
+LeanaMae: I didn't die last night I treated home and logged off as soon as I realized it happened again. The bed is  normal luxurious bed. I just wanted it know that it is happening.
+JackalTaco (Head Admin): The /home deletion is likely an issue with the Pippi mod, I've posted in their Discord and will try and get to the bottom of that.
+As for your bed, is it completely disappearing or is it still there but you just can't spawn on it?
+LeanaMae: It's there but can't spawn to it. I should have replaced it. I didn't think if it. Later when I get on
+JackalTaco (Head Admin): Is it the same bed as last time when you had this issue or did you place it again after that time?
+LeanaMae: Same one. I didn't think to replace it until jow
+Operator MEE6: <@462780242768035850> just advanced to level 2!
+JackalTaco (Head Admin): Alright, thanks for letting me know! I'll await a response from the mod creator for the /home bug thing and I'll test out the current bed you are using in case it is an issue with the bed. I'll let you know what I find out and if I resolve the issue. In the meanwhile try to change to a different bed and see if that has the same issue 🙂
+JackalTaco (Head Admin): Hey Leana, sorry I haven't got back to you until now, I've been fixing a lot of server issues to make sure the server runs smooth as possible.
+I have not yet got a response from the mod dev regarding the /home deleting bug so at the moment try to avoid using this feature and just use regular bed spawns until I get to the bottom of it. Make sure your bed is not blocked by anything as this can affect your spawn ability and if this does not work try using a different bed.
+LeanaMae: I am sorry I havent gotten back to you, I had something going on. I am going to change the  bed. Thank you for your hard work on this
+JackalTaco (Head Admin): No worries at all, happy to help 🙂

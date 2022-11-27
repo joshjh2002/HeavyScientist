@@ -1,0 +1,7 @@
+Operations Centre AI: Hello <@585495081713139765>, thank you for creating a support ticket! The <@&892427926811865119> will be with you shortly. Please can you describe your issue below?
+adam03: The game thinks my area is claimed by someone else. I cannot place anything at my base
+Terpene (Head Admin): The server just had a transfer to a new host, there are a few issues that are still being ironed out. If the issue is not resolved today, <@228605814716366850> will be on to have it sorted out tomorrow. 
+
+Please let us know of any other issues you encounter. Thank you, and I apologize for the inconvenience.
+JackalTaco (Head Admin): Hey Adam, if the issue has been resolved now may be close this ticket?
+adam03: Yes it is resolved

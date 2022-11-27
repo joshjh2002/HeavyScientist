@@ -1,0 +1,60 @@
+Operations Centre AI: Hello <@457642480415014922>, thank you for creating a support ticket! The <@&947809960534867998> will be with you shortly. Please can you describe your issue below?
+Thai: hi
+Thai: anyone here
+Terpene (Head Admin): How you doing sir, what can I assist with?
+Thai: hi mate
+Thai: you the owner?
+Terpene (Head Admin): Yes sir
+Terpene (Head Admin): of Rusty Operations that is
+Thai: Marcel?
+Terpene (Head Admin): That's my name
+Thai: perfect
+Thai: hi!
+Terpene (Head Admin): 🙂
+Terpene (Head Admin): How you doing good sir
+Thai: Im good, thanks!
+Thai: I admin my own rust server and had a question for you
+Thai: I saw ur post in the rust fb page and had a look at your info screen
+Thai: thats welcome UI from david right?
+Terpene (Head Admin): That's correct, I am using that plugin
+Thai: tell me
+Thai: how did you maange to modify your logo into the header? :p
+Thai: hahaha
+Terpene (Head Admin): David does good work, I was able to try out the vote map extension before it released publicly
+Thai: another 10 bucks, he could have included it in the addon imo
+Terpene (Head Admin): I agree, but I won't question how he wants to do it
+Terpene (Head Admin): So you need to go into data and then CUIdata
+Terpene (Head Admin): For WelcomePanel of course
+Thai: there is an option to  make the header like yours? or you modify it?
+Thai: 
+Thai: 
+Terpene (Head Admin): So I believe the way it works is upon loading the plugin it ask you which template you want to use
+Terpene (Head Admin): I am not sure if you can change templates after choosing one, that would be something to ask David tbh
+Terpene (Head Admin): ./wp_template
+Thai: oh its just a template, nothing fancy
+Terpene (Head Admin): Be careful cause you could mess up what you got now
+Terpene (Head Admin): 
+Thai: understandable
+Thai: ooh
+Thai: you choose the first template
+Operator MEE6: <@457642480415014922> just advanced to level 1!
+Thai: but i did not know you could at your logo that big to the side
+Thai: I like the third one
+Terpene (Head Admin): You would probably be able to do it with the one you got rn
+Terpene (Head Admin): You just need to mess around with the links in CUIdata
+Thai: and it does not conflict the code in any way if there would be an update let us say?
+Terpene (Head Admin): Nah it shouldn't even David said that if you want to change images that's where you can do it
+Terpene (Head Admin): But only for images
+Terpene (Head Admin): like for the buttons and stuff
+Thai: alright man, i'll have a look into this with my developer
+Thai: thanks for your f ast reply
+Thai: how old is your server how is going
+Terpene (Head Admin): No problem bro, that's what we do here! Just hit 2 months old this force wipe, it's going pretty good I been enjoying it everyone that has stayed to play has good things to say good thing. There is more things I want to make better but I need to pace myself, just a one man team.
+Terpene (Head Admin): How is your going?
+Thai: Haha, same here, also a one  man operation that cost some money. But I am enjoying it so far. Now working on my website and some promotion to grow the pop
+Thai: How come your server is not showing in the list?
+Terpene (Head Admin): Hell yeah bro got nothing but love for the other admins, its tough out here for us but keep your head up high and be proud of what you created.
+Terpene (Head Admin): It's there, just need to check modded and it might take a second to pop up
+Terpene (Head Admin): You can always use ./rust in this chat to receive the join link too if you want to check it out
+Terpene (Head Admin): But yeah bro I am glad I could help, if that's everything I will close this ticket out
+Thai: sure you can close it

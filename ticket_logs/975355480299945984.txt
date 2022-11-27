@@ -1,0 +1,13 @@
+Operations Centre AI: Hello <@251199653565956097>, thank you for creating a support ticket! The <@&892427926811865119> will be with you shortly. Please can you describe your issue below?
+King Ty: Heyo! I'm not sure if much can be done here since I don't know if there's any extra info on the admin side that doesn't show in my event log, but I think I had a wheel of pain decay bug
+
+ I had a lesser wheel of pain right beside my building for a few weeks. There's still another one a few feet away. I replaced one of them with a greater wheel of pain and it decayed. I'm not sure how it decayed since there wasn't any difference in placement, but it had a t2 taskmaster, t4 carpenter and cimmerian berserker on it which are unfortunately lost
+King Ty: For visual reference, I'm standing on the exact spot that the wheel was placed & decayed on. If this one decayed, I'm not sure why the other one just up ahead in the screenshot (or the previous, lesser one I had on this exact spot) didn't have this issue
+JackalTaco (Head Admin): Hey King Ty, sorry for the late reply, I was working today.
+Thanks for all the info you supplied here, it is strange indeed that the greater wheel of pain decayed but not the other one.
+
+It seems that the game has probably counted the decay on that wheel of pain separately than  your base decay for some reason. I can replace the greater wheel of pain for you but just keep an eye on the decay of things from time to time in case this happens again
+King Ty: Alright, thanks man
+JackalTaco (Head Admin): No problem, just give me a hola when you're online and I'll send it your way 🙂
+King Ty: I'm hopping on now 🙂
+JackalTaco (Head Admin): I gave the greater wheel of pain to Sasherry 🙂
