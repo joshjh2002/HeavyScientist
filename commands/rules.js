@@ -27,8 +27,7 @@ module.exports = {
         fields: [
           {
             name: ":one:",
-            value:
-              "Your account must comply with the Discord Terms of Service (Must be 13-years-old or older)!",
+            value: "You must be at least 16-years-old to play!",
           },
           {
             name: ":two:",
