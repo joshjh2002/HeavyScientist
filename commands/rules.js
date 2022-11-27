@@ -4,6 +4,7 @@ const {
   ButtonBuilder,
   ButtonStyle,
   Events,
+  AttachmentBuilder,
 } = require("discord.js");
 const debug = require("../debug");
 
@@ -21,7 +22,7 @@ module.exports = {
         description: "*Please read the rules below:*",
         color: 16034331,
         image: {
-          url: "https://operationscentre.github.io/community/img/Operations_Logo.png",
+          url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
         },
         fields: [
           {
@@ -95,7 +96,16 @@ module.exports = {
           .setStyle(ButtonStyle.Primary)
       );
 
-      interaction.reply({ embeds: [embed], components: [row] });
+      const attachment1 = new AttachmentBuilder("img/RulesTop.png");
+      const attachment2 = new AttachmentBuilder("img/RulesBottom1.png");
+      const attachment3 = new AttachmentBuilder("img/RulesBottom2.gif");
+
+      await interaction.reply({
+        files: [attachment1],
+        embeds: [embed],
+        components: [row],
+      });
+      interaction.followUp({ files: [attachment2, attachment3] });
     } else {
       interaction.reply({
         content: "You do not have permission to use this command.",
