@@ -110,9 +110,43 @@ module.exports = {
           client,
           interaction
         );
+      } else if (interaction.customId === "medjay-button") {
+        this.add_role(interaction, "786593800596357130");
+      } else if (interaction.customId === "spartan-button") {
+        this.add_role(interaction, "1047156960769867916");
+      } else if (interaction.customId === "immortals-button") {
+        this.add_role(interaction, "917405625712001085");
+      } else if (interaction.customId === "centurion-button") {
+        this.add_role(interaction, "786591672770625548");
+      } else if (interaction.customId === "na-button") {
+        this.add_role(interaction, "1047157742831423549");
+      } else if (interaction.customId === "eu-button") {
+        this.add_role(interaction, "1047157818999963648");
+      } else if (interaction.customId === "row-button") {
+        this.add_role(interaction, "1047158446602063913");
       }
     } catch (err) {
       debug.log("Something went when handling the buttons\n\n" + err);
+    }
+  },
+
+  add_role: function (interaction, roleId) {
+    try {
+      if (interaction.member.roles.cache.has(roleId)) {
+        interaction.reply({
+          content: "You no longer have the <@&" + roleId + "> role.",
+          ephemeral: true,
+        });
+        interaction.member.roles.remove(roleId);
+      } else {
+        interaction.reply({
+          content: "You have been given the <@&" + roleId + "> role.",
+          ephemeral: true,
+        });
+        interaction.member.roles.add(roleId);
+      }
+    } catch (err) {
+      debug.log("Something went wrong sending the interaction\n\n" + err);
     }
   },
 

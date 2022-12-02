@@ -4,11 +4,16 @@ const {
   ButtonBuilder,
   ButtonStyle,
   Events,
+  AttachmentBuilder,
 } = require("discord.js");
 
 const debug = require("../debug");
 
-const { rust_role } = require("../jsons/server-embeds");
+const {
+  rust_role,
+  cosmetic_roles,
+  location_roles,
+} = require("../jsons/server-embeds");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -20,7 +25,6 @@ module.exports = {
         interaction.member.roles.cache.has(process.env.DC_MOD_ROLE)) &&
       interaction.options.getBoolean("link") != true
     ) {
-      let row;
       /*
       row = new MessageActionRow().addComponents(
         new MessageButton()
@@ -37,19 +41,80 @@ module.exports = {
       });
       */
 
-      row = new ActionRowBuilder().addComponents(
+      const attachment1 = new AttachmentBuilder("img/RolesTop.png");
+      const attachment2 = new AttachmentBuilder("img/RolesBottom1.png");
+      const attachment3 = new AttachmentBuilder("img/RolesBottom2.gif");
+
+      let message = await interaction.reply({
+        files: [attachment1],
+        fetchReply: true,
+      });
+
+      //cosmetic roles here:
+      let cosmeticButtons = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+          .setCustomId("medjay-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("1️⃣"),
+        new ButtonBuilder()
+          .setCustomId("spartan-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("2️⃣"),
+        new ButtonBuilder()
+          .setCustomId("immortals-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("3️⃣"),
+        new ButtonBuilder()
+          .setCustomId("centurion-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("4️⃣")
+      );
+
+      message = await message.reply({
+        embeds: [cosmetic_roles],
+        components: [cosmeticButtons],
+        fetchReply: true,
+      });
+
+      //location roles here:
+
+      let locationButtons = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+          .setCustomId("na-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("1️⃣"),
+        new ButtonBuilder()
+          .setCustomId("eu-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("2️⃣"),
+        new ButtonBuilder()
+          .setCustomId("row-button")
+          .setStyle(ButtonStyle.Secondary)
+          .setEmoji("3️⃣")
+      );
+      message = await message.reply({
+        embeds: [location_roles],
+        components: [locationButtons],
+        fetchReply: true,
+      });
+
+      //Rust Role
+      let rustButtons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
           .setCustomId("rust-button")
           .setLabel("Rusty Operations")
-          .setStyle(ButtonStyle.Primary)
+          .setStyle(ButtonStyle.Secondary)
           .setEmoji(process.env.RUST_EMOJI)
       );
 
-      let message = await interaction.reply({
+      message = await message.reply({
         embeds: [rust_role],
-        components: [row],
+        components: [rustButtons],
         fetchReply: true,
       });
+
+      //sends bottom 2 images
+      message.reply({ files: [attachment2, attachment3] });
 
       /*
       row = new MessageActionRow().addComponents(

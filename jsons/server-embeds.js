@@ -81,4 +81,59 @@ module.exports = {
       "Make sure to get this role if you play on our Rust server so that you can see the Rust channels and get pinged for server announcements and other Rusty things.",
     color: 13724201,
   },
+
+  cosmetic_roles: {
+    title: "Cosmetic Roles",
+    color: 16749824,
+    thumbnail: {
+      url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
+    },
+    fields: [
+      {
+        name: ":one:",
+        value: "<@&786593800596357130>",
+        inline: true,
+      },
+      {
+        name: ":two:",
+        value: "<@&1047156960769867916>",
+        inline: true,
+      },
+      {
+        name: ":three:",
+        value: "<@&917405625712001085>",
+        inline: true,
+      },
+      {
+        name: ":four:",
+        value: "<@&786591672770625548>",
+        inline: true,
+      },
+    ],
+  },
+
+  location_roles: {
+    title: "Locations Roles",
+    color: 16749824,
+    thumbnail: {
+      url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
+    },
+    fields: [
+      {
+        name: ":one:",
+        value: "<@&1047157742831423549>",
+        inline: true,
+      },
+      {
+        name: ":two:",
+        value: "<@&1047157818999963648>",
+        inline: true,
+      },
+      {
+        name: ":three:",
+        value: "<@&1047158446602063913>",
+        inline: true,
+      },
+    ],
+  },
 };
