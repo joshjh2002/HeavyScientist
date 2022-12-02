@@ -152,7 +152,7 @@ client.on("messageReactionAdd", (reaction, user) => {
 
 client.on(Events.GuildMemberAdd, async (member) => {
   await sleep(500);
-  debug.log("Member Joined\n");
+  debug.log(member.username + " joined\n");
 
   const canvas = Canvas.createCanvas(500, 250);
 
@@ -227,10 +227,10 @@ client.on(Events.GuildMemberAdd, async (member) => {
 });
 
 client.on(Events.GuildMemberRemove, async (member) => {
-  debug.log("Member Left\n");
+  debug.log(member.username + " left\n");
 
   client.channels.cache
-    .get(process.env.DC_WELCOME_CHANNEL)
+    .get(process.env.DC_BOT_LOG)
     .send("<@" + member.id + "> has left the island.");
 });
 
