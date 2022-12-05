@@ -93,10 +93,9 @@ client.once(Events.ClientReady, async () => {
 });
 
 let statusList = [
-  "Welcome to the Operations Centre",
-  "Check out the our servers channel",
+  "Welcome to the Rusty Operations",
   "Can't see something? Go to the roles channel!",
-  "Why not give our Rust server a go?",
+  "Why not join our Rust server?",
   "All systems online!",
 ];
 
@@ -152,7 +151,28 @@ client.on("messageReactionAdd", (reaction, user) => {
 
 client.on(Events.GuildMemberAdd, async (member) => {
   await sleep(500);
-  debug.log(member.username + " joined\n");
+  debug.log(member.user.username + " joined\n");
+
+  const userjoined = {
+    title:
+      member.user.username +
+      "#" +
+      member.user.discriminator +
+      " has joined the server",
+    color: 3847248,
+    thumbnail: {
+      url: member.user.displayAvatarURL(),
+    },
+    author: {
+      name: member.user.username + "#" + member.user.discriminator,
+      url: member.user.displayAvatarURL(),
+      icon_url: member.user.displayAvatarURL(),
+    },
+  };
+
+  client.channels.cache
+    .get(process.env.DC_BOT_LOG)
+    .send({ embeds: [userjoined] });
 
   const canvas = Canvas.createCanvas(500, 250);
 
@@ -227,11 +247,28 @@ client.on(Events.GuildMemberAdd, async (member) => {
 });
 
 client.on(Events.GuildMemberRemove, async (member) => {
-  debug.log(member.username + " left\n");
+  debug.log(member.user.username + " left\n");
+
+  const userleft = {
+    title:
+      member.user.username +
+      "#" +
+      member.user.discriminator +
+      " has left the server",
+    color: 3847248,
+    thumbnail: {
+      url: member.user.displayAvatarURL(),
+    },
+    author: {
+      name: member.user.username + "#" + member.user.discriminator,
+      url: member.user.displayAvatarURL(),
+      icon_url: member.user.displayAvatarURL(),
+    },
+  };
 
   client.channels.cache
     .get(process.env.DC_BOT_LOG)
-    .send("<@" + member.id + "> has left the island.");
+    .send({ embeds: [userleft] });
 });
 
 client.login(process.env.DC_TOKEN);
