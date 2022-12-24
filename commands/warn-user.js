@@ -24,14 +24,15 @@ const tools = require("../tools");
 
 module.exports = {
   data: new ContextMenuCommandBuilder()
-    .setName("warn-message")
-    .setType(ApplicationCommandType.Message),
+    .setName("warn-user")
+    .setType(ApplicationCommandType.User),
   async execute(interaction, client) {
     if (
       interaction.member.roles.cache.has(process.env.DC_ADMIN_ROLE) ||
       interaction.member.roles.cache.has(process.env.DC_MOD_ROLE)
     ) {
-      const selectedUser = interaction.targetMessage.author.id;
+      console.log(interaction.targetUser);
+      const selectedUser = interaction.targetUser.id;
 
       let guild = client.guilds.cache.get(process.env.DC_GUILD_ID);
       let user = await guild.members.fetch(selectedUser);
@@ -65,7 +66,7 @@ module.exports = {
             selectedUser +
             ", " +
             "'" +
-            interaction.targetMessage.author.toString() +
+            interaction.targetUser.toString() +
             "'" +
             ", 0" +
             ");";
@@ -102,16 +103,12 @@ module.exports = {
             const userWarned = {
               title: "Member has been warned",
               description:
-                interaction.targetMessage.author.username +
+                interaction.targetUser.username +
                 "#" +
-                interaction.targetMessage.author.discriminator +
+                interaction.targetUser.discriminator +
                 " has been warned.\nThey now have " +
                 (numberOfWarnings + 1) +
-                " warning(s).\n\nThey were warned for the following message in <#" +
-                interaction.targetMessage.channelId +
-                "> where they said:\n```" +
-                interaction.targetMessage.content +
-                "```\nThe message was automatically deleted.",
+                " warning(s).",
               color: 3847248,
               author: {
                 name:
@@ -127,12 +124,9 @@ module.exports = {
               .get(process.env.DC_BOT_LOG)
               .send({ embeds: [userWarned] });
 
-            interaction.targetMessage.author.send(
-              "You have been warned for the following message which you sent in <#" +
-                interaction.targetMessage.channelId +
-                ">:\n```" +
-                interaction.targetMessage.content +
-                "```\nYou have " +
+            interaction.targetUser.send(
+              "You have been warned." +
+                "\nYou have " +
                 (numberOfWarnings + 1) +
                 " warnings. 3 warnings will result in a ban or a kick, depending on the offence."
             );
@@ -141,10 +135,8 @@ module.exports = {
           warn.checkDispute(
             interaction,
             numberOfWarnings,
-            interaction.targetMessage.author.id
+            interaction.targetUser.id
           );
-
-          interaction.targetMessage.delete();
         });
       });
     } else {
