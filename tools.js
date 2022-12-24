@@ -232,4 +232,47 @@ module.exports = {
       debug.log("Something went wrong sending the link\n\n" + err);
     }
   },
+
+  modalHandler: async function (interaction, client) {
+    let modalName = interaction.customId.split("-");
+
+    if (modalName[0] == "dispute") {
+      let userId = modalName[1];
+
+      let guild = client.guilds.cache.get(process.env.DC_GUILD_ID);
+      let user = await guild.members.fetch(userId);
+
+      if (
+        user._roles.includes(process.env.DC_ADMIN_ROLE) ||
+        user._roles.includes(process.env.DC_MOD_ROLE)
+      ) {
+        interaction.reply({
+          ephemeral: true,
+          content:
+            "You cannot ban or kick this user. They are a member of staff.",
+        });
+        return;
+      }
+
+      const bankick = interaction.fields.getTextInputValue("bankick");
+      const reason = interaction.fields.getTextInputValue("reason");
+
+      if (bankick == "b") {
+        await user.send(
+          "You were banned from Rusty Operations. Reason:\n```" + reason + "```"
+        );
+        user.ban({ reason });
+      } else if (bankick == "k") {
+        await user.send(
+          "You were kicked from Rusty Operations. Reason:\n```" + reason + "```"
+        );
+        user.kick({ reason });
+      } else {
+        interaction.reply({
+          ephemeral: true,
+          content: "Type 'b' for ban and 'k' for kick",
+        });
+      }
+    }
+  },
 };

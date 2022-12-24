@@ -132,6 +132,7 @@ module.exports = {
           "'" +
           user.toString() +
           "'" +
+          ", 0" +
           ");";
       }
 

@@ -136,6 +136,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
         console.error(err);
       }
     }
+
+    if (interaction.isModalSubmit()) tools.modalHandler(interaction, client);
   } catch (err) {}
 });
 
