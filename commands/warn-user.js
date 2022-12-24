@@ -31,7 +31,6 @@ module.exports = {
       interaction.member.roles.cache.has(process.env.DC_ADMIN_ROLE) ||
       interaction.member.roles.cache.has(process.env.DC_MOD_ROLE)
     ) {
-      console.log(interaction.targetUser);
       const selectedUser = interaction.targetUser.id;
 
       let guild = client.guilds.cache.get(process.env.DC_GUILD_ID);
