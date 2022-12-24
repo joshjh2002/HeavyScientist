@@ -11,7 +11,7 @@ module.exports = {
       {
         name: "Connection Info:",
         value:
-          "  •   Server Name: Rusty Operations 3x | Solo/Duo/Trio | (½Decay|RaidAlarm|Loot+|Shop)\n  •   Server IP: www.rustyoprtations.com:28040",
+          "  •   Server Name: Rusty Operations 3x | Solo/Duo/Trio | (½Decay|RaidAlarm|Loot+|Shop)\n  •   Server IP: www.rustyoperations.com:28040",
       },
       {
         name: "Wipe Info:",
