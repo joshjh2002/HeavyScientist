@@ -99,13 +99,27 @@ let statusList = [
   "All systems online!",
 ];
 
+let today, dd, mm;
+
 async function status() {
-  let currentStatus = Math.floor(Math.random() * statusList.length);
+  today = new Date();
+  dd = String(today.getDate()).padStart(2, "0");
+  mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 
-  client.user.setPresence({
-    activities: [{ name: statusList[currentStatus] }],
-  });
-
+  if (dd == "01" && mm == "01") {
+    client.user.setPresence({
+      activities: [{ name: "Happy New Year" }],
+    });
+  } else if (dd == "25" && mm == "12") {
+    client.user.setPresence({
+      activities: [{ name: "Merry Christmas" }],
+    });
+  } else {
+    let currentStatus = Math.floor(Math.random() * statusList.length);
+    client.user.setPresence({
+      activities: [{ name: statusList[currentStatus] }],
+    });
+  }
   setTimeout(status, 60000);
 }
 

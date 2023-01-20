@@ -1,0 +1,14 @@
+Heavy Scientist: Hello <@483757969310220288>, thank you for creating a support ticket! The <@&947809960534867998> will be with you shortly. Please can you describe your issue below?
+Krazywabb1t: the link is not working...
+Levelling Systems: <@483757969310220288> just advanced to level 1!
+JackalTaco: Hey wabb1t!
+Is it the join link or the vote link that you're having issues with?
+Krazywabb1t: the join link
+Krazywabb1t: 
+Krazywabb1t: i managed to join via history in rust...but that was after about 3 game restarts
+joshjh2002: Hey <@483757969310220288>. I apologise for this inconvenience! I made an error when pushing the website to GitHub. the links should all work now!
+joshjh2002: Please let me know if it doesn't work, and we can problem-solve together!
+Krazywabb1t: works now
+JackalTaco: Glad to hear it 🙂
+Is it okay if we close the ticket now?
+Krazywabb1t: yes

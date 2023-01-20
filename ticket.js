@@ -126,7 +126,7 @@ module.exports = {
 
       if (founduser == false) {
         query +=
-          "INSERT INTO users(user_id, user_name) VALUES (" +
+          "INSERT INTO users(user_id, user_name, warnings) VALUES (" +
           user.id +
           ", " +
           "'" +
@@ -209,13 +209,7 @@ module.exports = {
         client
       );
     } else if (reaction.emoji.name === "☑") {
-      admin_role =
-        "<@&" +
-        process.env.DC_ADMIN_ROLE +
-        ">" +
-        " <@&" +
-        process.env.DC_MOD_ROLE +
-        ">";
+      admin_role = "<@&" + process.env.DC_ADMIN_ROLE + ">";
       this.CreateChannel(
         reaction,
         user,
