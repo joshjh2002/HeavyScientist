@@ -96,8 +96,7 @@ module.exports = {
       );
 
       const attachment1 = new AttachmentBuilder("img/RulesTop.png");
-      const attachment2 = new AttachmentBuilder("img/RulesBottom1.png");
-      const attachment3 = new AttachmentBuilder("img/RulesBottom2.gif");
+      const attachment3 = new AttachmentBuilder("img/RulesBottom.gif");
 
       await interaction.reply({
         files: [attachment1],

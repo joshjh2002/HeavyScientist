@@ -42,8 +42,7 @@ module.exports = {
       */
 
       const attachment1 = new AttachmentBuilder("img/RolesTop.png");
-      const attachment2 = new AttachmentBuilder("img/RolesBottom1.png");
-      const attachment3 = new AttachmentBuilder("img/RolesBottom2.gif");
+      const attachment2 = new AttachmentBuilder("img/RolesBottom.gif");
 
       let message = await interaction.reply({
         files: [attachment1],
@@ -114,7 +113,7 @@ module.exports = {
       });
 
       //sends bottom 2 images
-      message.reply({ files: [attachment2, attachment3] });
+      message.reply({ files: [attachment2] });
 
       /*
       row = new MessageActionRow().addComponents(
