@@ -96,14 +96,14 @@ module.exports = {
       );
 
       const attachment1 = new AttachmentBuilder("img/RulesTop.png");
-      const attachment3 = new AttachmentBuilder("img/RulesBottom.gif");
+      const attachment2 = new AttachmentBuilder("img/RulesBottom.gif");
 
       await interaction.reply({
         files: [attachment1],
         embeds: [embed],
         components: [row],
       });
-      interaction.followUp({ files: [attachment2, attachment3] });
+      interaction.followUp({ files: [attachment2] });
     } else {
       interaction.reply({
         content: "You do not have permission to use this command.",
