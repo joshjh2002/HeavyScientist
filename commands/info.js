@@ -48,6 +48,14 @@ module.exports = {
 
         if (res.rows[0] != undefined) warnings = res.rows[0].warnings;
 
+        let roles = "";
+
+        member._roles.forEach((element) => {
+          roles += "<@&" + element + ">\n";
+        });
+
+        if (roles == "") roles == "None";
+
         const embed = {
           author: {
             name: member.user.username,
@@ -64,6 +72,10 @@ module.exports = {
               name: "Date Joined:",
               value: moment.utc(member.joinedAt).format("DD/MM/YYYY") + "",
               inline: true,
+            },
+            {
+              name: "Roles:",
+              value: "" + roles,
             },
             {
               name: "Warnings:",
