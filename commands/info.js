@@ -51,7 +51,7 @@ module.exports = {
         let roles = "";
 
         member._roles.forEach((element) => {
-          roles += "<@&" + element + ">\n";
+          roles += "<@&" + element + ">";
         });
 
         if (roles == "") roles == "None";
