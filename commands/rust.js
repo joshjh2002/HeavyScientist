@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require("discord.js");
 const { rust_embed } = require("../jsons/server-embeds");
 const { sendLink } = require("../tools");
 const debug = require("../debug");
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()

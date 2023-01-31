@@ -6,6 +6,7 @@ const {
   Events,
 } = require("discord.js");
 const debug = require("../debug");
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()
