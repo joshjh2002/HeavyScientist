@@ -6,6 +6,7 @@ const {
   Events,
   AttachmentBuilder,
 } = require("discord.js");
+require("dotenv").config();
 
 const debug = require("../debug");
 

@@ -152,15 +152,15 @@ module.exports = {
 
   rust_button: function (interaction, client) {
     try {
-      if (interaction.member.roles.cache.has("870978829974384660")) {
+      if (interaction.member.roles.cache.has(process.env.DC_MEMBER_RUST_ROLE)) {
         interaction.reply({
           content:
             "You no longer have the Rust role. We're sorry to see you go.",
           ephemeral: true,
         });
-        interaction.member.roles.remove("870978829974384660");
+        interaction.member.roles.remove(process.env.DC_MEMBER_RUST_ROLE);
         client.channels.cache
-          .get("947811153092964382")
+          .get(process.env.RUST_CHANNEL)
           .send(
             "<@" + interaction.member.user.id + "> has removed the Rust role."
           );
@@ -169,9 +169,9 @@ module.exports = {
           content: "You have been given the Rust role.",
           ephemeral: true,
         });
-        interaction.member.roles.add("870978829974384660");
+        interaction.member.roles.add(process.env.DC_MEMBER_RUST_ROLE);
         client.channels.cache
-          .get("947811153092964382")
+          .get(process.env.RUST_CHANNEL)
           .send("<@" + interaction.member.user.id + "> has got the Rust role.");
 
         let messages = [
@@ -184,14 +184,14 @@ module.exports = {
           description:
             messages[rnd] +
             "\nYou can use `/rust` to get a link that will automatically connect you to the server.",
-          color: 16749824,
+          color: process.env.EMBED_COLOUR,
           thumbnail: {
             url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
           },
           author: {
-            name: "Terpene Boy",
+            name: "Ambitious_Gear",
             icon_url:
-              "https://cdn.discordapp.com/avatars/697595109415583756/b945b92f47ee1ab19543ce25f40ecb20.png",
+              "https://cdn.discordapp.com/avatars/697595109415583756/4b25cbfceac2dcf22632f24d14b325cb.webp",
           },
         };
 

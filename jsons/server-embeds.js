@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 module.exports = {
   rust_embed: {
     title: "Rusty Operations",
     description:
       "Our server brings a premium experience, offering a mixture of rebalanced gameplay, premium plugins and new maps. For US and UK/EU players!",
-    color: 16749824,
+    color: process.env.EMBED_COLOUR,
     image: {
       url: "https://media.discordapp.net/attachments/742826117395775589/918252341587742730/RusticOperationsThemedHD.png",
     },
@@ -84,7 +86,7 @@ module.exports = {
 
   cosmetic_roles: {
     title: "Cosmetic Roles",
-    color: 16749824,
+    color: process.env.EMBED_COLOUR,
     thumbnail: {
       url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
     },
@@ -114,7 +116,7 @@ module.exports = {
 
   location_roles: {
     title: "Locations Roles",
-    color: 16749824,
+    color: process.env.EMBED_COLOUR,
     thumbnail: {
       url: "https://operationscentre.github.io/community/img/rust-logo.jpg",
     },

@@ -14,6 +14,7 @@ const pgconnection = new pgDatabase.Client({
 pgconnection.connect();
 
 const debug = require("../debug");
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()

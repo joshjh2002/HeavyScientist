@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { donations_embed } = require("../jsons/server-embeds");
 const debug = require("../debug");
+require("dotenv").config();
 
 module.exports = {
   data: new SlashCommandBuilder()
