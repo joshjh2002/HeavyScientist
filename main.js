@@ -59,7 +59,7 @@ if (DELETE) {
 
 //Once the bot is online
 client.once(Events.ClientReady, async () => {
-  debug.log("Operations Centre AI: Online!");
+  debug.log("Heavy Scientist: Online!");
   tools.ready(client);
 
   const CLIENT_ID = client.user.id;
